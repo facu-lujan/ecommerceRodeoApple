@@ -26,8 +26,6 @@ const overlay = document.querySelector('.overlay');
 closeShopCart.addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
 
-
-
 const sweetAlert = document.querySelector ('.sweetAlert')
 
 sweetAlert.onclick = (e) => {
@@ -38,3 +36,18 @@ sweetAlert.onclick = (e) => {
 		button: "Aceptar",
 	  });
 }
+
+
+const productcontainer = document.getElementById('product-container')
+
+stockProductos.forEach((product) => {
+	const div = document.createElement('div')
+	div.classList.add('Product')
+	div.innerHTML = `
+	<img src${product.img} alt="">
+	<h4>${product.productName}</h4>
+	<h5>${product.priceValue}</h5>
+	<button id="add${product.id}" class="add-button">Agregar al carrito <i class="fas fa-cart-plus"></button>
+	`
+	contenedorProductos.appendChild(div)
+});
