@@ -38,16 +38,24 @@ sweetAlert.onclick = (e) => {
 }
 
 
-const productcontainer = document.getElementById('product-container')
+const main = document.querySelector('.main')
 
-stockProductos.forEach((product) => {
-	const div = document.createElement('div')
-	div.classList.add('Product')
-	div.innerHTML = `
-	<img src${product.img} alt="">
-	<h4>${product.productName}</h4>
-	<h5>${product.priceValue}</h5>
-	<button id="add${product.id}" class="add-button">Agregar al carrito <i class="fas fa-cart-plus"></button>
-	`
-	contenedorProductos.appendChild(div)
-});
+fetch(stock.json)
+  .then((response) => {
+	return response.json()
+  })
+  .then((json) => {
+	let products = json.results
+
+	products.forEach(product => {
+		const {productName, desc, priceValue, img} = product
+
+         main.innerHTML += `
+		 <img src${product.img} alt="">
+		 <h4>${product.productName}</h4>
+		 <h5>${product.priceValue}</h5>
+		 <button id="add${product.id}" class="add-button">Agregar al carrito <i class="fas fa-cart-plus"></button>
+		 `
+
+	})
+  })
