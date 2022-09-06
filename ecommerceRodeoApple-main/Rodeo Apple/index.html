@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <script src="JS/jquery-3.5.1.min.js"></script>
+        <script src="JS/multislider.min.js"></script>
+        <title>Rodeo Apple</title>
+    </head>
+
+
+    <body>
+        
+        <nav>
+            
+            <div class="navbar-top">
+                <div>
+                    <button id="menuButton"><i class="fas fa-bars"></i></button>
+                    
+                    <a href="index.html">
+                        <h2 class="logo">Rodeo Apple</h2>
+                    </a>
+                </div>
+                <div>
+                    
+                    <div class="account">
+                        <a href="index.html">
+                            <button class="account-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <span class="account-text">Mi Cuenta</span>
+                        </a>
+                       
+                    </div>
+                    
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                           
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+         
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>Cart</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Tu carrito esta vacio</h4>
+                   
+                </ul>
+                <button class="btn checkout hidden sweetAlert">Check out</button>
+            </div>
+        </nav>
+        <header id="hearderSlide">
+            <div class="MS-content">
+                <a href="detail_page.html" class="item">
+                    <img src="ASSETS/Otros/slide1.jpg" />
+                </a>
+                
+                <a href="detail_page.html" class="item">
+                    <img src="ASSETS/Otros/slide3.jpg" />
+                </a>
+                
+                <a href="detail_page.html" class="item">
+                    <img src="ASSETS/Otros/slide5.jpg" />
+                </a>
+            </div>
+            <div class="MS-controls">
+                <button class="MS-right">
+                    <i class="fas fa-chevron-right fa-3x"></i>
+                </button>
+                <button class="MS-left">
+                    <i class="fas fa-chevron-left fa-3x"></i>
+                </button>
+            </div>
+        </header>
+        <div class="pop-mobiles-1">
+            <figure>
+                <img
+                    src="ASSETS/Productos/Celulares/new iphone.jpg"
+                />
+            </figure>
+            <div>
+                <h2>iPhone XS</h2>
+                <p>
+                    Un chip superrápido, un salto en duración de batería y nuevas funcionalidades de foto y video. El iPhone XS te abre un mundo de posibilidades en dos increíbles tamaños.  
+                </p>
+                <h4>$499</h4>
+                <a href="detail_page.html" class="btn"
+                    >Compralo ahora!<i class="fas fa-angle-right"></i
+                ></a>
+            </div>
+        </div>
+        <main>
+            <section class="main-section">
+                <div class="product-container">
+                    <h3>Nuestros Productos!</h3>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Macbooks/laptop-1.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="1"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Añadir al Carrito
+                                    
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">MacBook Air 2016</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        13", 256GB, 8GB RAM
+                                    </p>
+                                    <h6 class="price">
+                                        $<span class="priceValue">750</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Macbooks/laptop-2.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="2"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Añadir al Carrito
+                                            
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">MacBook Air 2020</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        14", 512GB, 16GB RAM
+                                    </p>
+                                    <h6 class="price">
+                                        $<span class="priceValue">1000</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Macbooks/laptop-3.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="3"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">MacBook Pro 2017</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        16", 512GB, 16GB RAM
+                                    </p>
+                                    <h6 class="price">
+                                        $<span class="priceValue">1200</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Macbooks/laptop-4.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="4"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">MacBook Pro 2021</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        16", 1TB, 24GB RAM
+                                    </p>
+                                    <h6 class="price">
+                                        $<span class="priceValue">1600</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/galaxynote10.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="5"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Samsung Galaxy Note 10</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        128GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue"
+                                            >1000</span
+                                        >
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/mobile-3.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="6"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">iPhone 11</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        64GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue">950</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/galaxy s.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="7"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Samsung Galaxy S9+</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        128GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue">800</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/mobile-2.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="8"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">iPhone 12</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        256GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue">980</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/mobile.1.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="9"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">iPhone 12 Pro</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        512GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue">1180</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="ASSETS/Productos/Celulares/mobile-3.png"
+                                        alt="popular mobiles"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="10"
+                                        >
+                                            <i class="fas fa-cart-plus"></i
+                                            >Añadir al Carrito 
+                                        </button>
+                                        
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">iPhone 13</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        128GB
+                                    </p>
+                                    <h4 class="price">
+                                        $<span class="priceValue">1300</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer>
+            <div class="footer-second">
+                <div class="footer-column-1">
+                    <h3>News</h3>
+                    <a href="#"></a>
+                    <a href="#">Suscribite a nuestro Newsletter!</a>
+                    
+                </div>
+                <div class="footer-column-2">
+                    <h3>Atencion al Cliente</h3>
+                    <a href="#">Contacto</a>
+                    <a href="#">Segui tu pedido!</a>
+                    <a href="#">Terminos de compra</a>
+                    
+                </div>
+                <div class="footer-column-3">
+                    <h3>Nosotros</h3>
+                    <a href="#">Quienes somos?</a>
+                    <a href="#">Nuestros servicios</a>
+                    <a href="#">Eventos</a>
+                    
+                </div>
+            </div>
+            <ul class="footer-last">
+                <li>
+                    <p><i class="fab fa-cc-mastercard"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-paypal"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-visa"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-amex"></i></p>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="JS/script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>
